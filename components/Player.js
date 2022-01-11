@@ -1,6 +1,6 @@
 import React from 'react';
 import Matter from 'matter-js';
-import { View } from 'react-native';
+import { View, Image } from 'react-native';
 
 
 const Player = props => {
@@ -15,16 +15,19 @@ const Player = props => {
     return (
         <View 
             style={{
-                borderWidth: 2,
-                borderColor: color,
-                borderStyle: 'solid',
                 position: 'absolute',
                 left: xBody,
                 top: yBody,
                 width: widthBody,
                 height: heightBody
             }}
-        />
+        >
+            <Image 
+                source={require('../assets/AppImage/player.png')} 
+                resizeMode='cover'
+                style={{height: heightBody, width: widthBody}}
+            />
+        </View>
     )
 }
 
